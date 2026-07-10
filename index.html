@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movana - Offline Music Player</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0f172a;
+      --card: rgba(15, 23, 42, 0.78);
+      --text: #e2e8f0;
+      --muted: #cbd5e1;
+      --accent: #60a5fa;
+      --accent-2: #34d399;
+      --border: rgba(148, 163, 184, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(96, 165, 250, 0.25), transparent 35%),
+        radial-gradient(circle at right, rgba(52, 211, 153, 0.18), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 72px 24px 56px;
+    }
+
+    .hero {
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--card);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 80px rgba(15, 23, 42, 0.3);
+    }
+
+    h1, h2 {
+      margin: 0 0 16px;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 1.4rem;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(96, 165, 250, 0.12);
+      color: #bfdbfe;
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .actions,
+    .legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    a.button,
+    a.link-card {
+      text-decoration: none;
+      transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+    }
+
+    a.button {
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: rgba(15, 23, 42, 0.5);
+      font-weight: 600;
+    }
+
+    a.button.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #082f49;
+      border: none;
+    }
+
+    a.button:hover,
+    a.link-card:hover {
+      transform: translateY(-1px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .card,
+    .link-card {
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.58);
+    }
+
+    .card strong,
+    .link-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .link-card {
+      color: var(--muted);
+      min-width: 240px;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: #bfdbfe;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <span class="tag">Movana for iOS</span>
+      <h1>Offline Music, Organized Simply.</h1>
+      <p>Movana is a local offline music player for iPhone that helps you import, organize, edit, and play music files stored on your own device.</p>
+      <p>Movana does not provide music downloads, and it does not upload, host, or share your music files on external servers.</p>
+      <div class="actions">
+        <a class="button primary" href="privacy-policy.html">Privacy Policy</a>
+        <a class="button" href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Core Features</h2>
+      <div class="grid">
+        <article class="card">
+          <strong>Import Local Music</strong>
+          <p>Use your music files stored on device for playback inside the app.</p>
+        </article>
+        <article class="card">
+          <strong>Create Playlists</strong>
+          <p>Build and manage playlists for personal listening without cloud sync.</p>
+        </article>
+        <article class="card">
+          <strong>Edit Metadata</strong>
+          <p>Update song title, artist, album, and other local music information.</p>
+        </article>
+        <article class="card">
+          <strong>Offline Playback</strong>
+          <p>Enjoy your music library without requiring network streaming.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Legal</h2>
+      <div class="legal-links">
+        <a class="link-card" href="privacy-policy.html">
+          <strong>Privacy Policy</strong>
+          Explains what data Movana handles, including local media access and optional Firebase analytics and crash reporting.
+        </a>
+        <a class="link-card" href="terms-of-service.html">
+          <strong>Terms of Service</strong>
+          Describes permitted use of the app, user responsibilities, and legal terms for Movana.
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      Contact: <a href="mailto:movanaofflinemusic@163.com">movanaofflinemusic@163.com</a><br>
+      Website: <code>https://movanaplayer.github.io/movana/</code>
+    </footer>
+  </main>
+</body>
+</html>
